@@ -1,0 +1,41 @@
+artifact_path: mlflow-artifacts:/1/models/m-ce988c8b5157420aababc66ba3e786fd/artifacts
+flavors:
+  catboost:
+    catboost_version: 1.2.2
+    code: null
+    data: model.cb
+    model_type: CatBoostClassifier
+    save_format: cbm
+  python_function:
+    data: model.cb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.catboost
+    python_version: 3.10.12
+is_signature_from_type_hint: false
+mlflow_version: 3.1.0
+model_id: m-ce988c8b5157420aababc66ba3e786fd
+model_size_bytes: 48336723
+model_uuid: m-ce988c8b5157420aababc66ba3e786fd
+prompts: null
+run_id: 10465daa170c46a4b3ec431dd0574a22
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "categoryid_enc", "required": true}, {"type":
+    "long", "name": "parentid_enc", "required": true}, {"type": "long", "name": "available",
+    "required": true}, {"type": "long", "name": "istransaction", "required": true},
+    {"type": "long", "name": "day_of_week", "required": true}, {"type": "long", "name":
+    "day", "required": true}, {"type": "long", "name": "hour", "required": true},
+    {"type": "double", "name": "rating", "required": true}, {"type": "double", "name":
+    "item_id_week", "required": true}, {"type": "double", "name": "item_viewed", "required":
+    true}, {"type": "double", "name": "rating_avg", "required": true}, {"type": "double",
+    "name": "rating_std", "required": true}]'
+  outputs: '[{"type": "double", "name": "cb_score", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-07-01 17:39:35.171846'
